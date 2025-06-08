@@ -28,44 +28,138 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section - Mobile First */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-                Transforme sua <span className="text-red-500">saúde</span> e bem-estar feminino
+      {/* Hero Section - Elegante */}
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full" style={{background: 'radial-gradient(circle, #25543c 0%, transparent 70%)'}}></div>
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full" style={{background: 'radial-gradient(circle, #dc2626 0%, transparent 70%)'}}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            {/* Content */}
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <div className="mb-6">
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style={{backgroundColor: '#25543c', color: 'white'}}>
+                  ✨ Nutricionista Especializada
+                </span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-[1.1] tracking-tight">
+                Transforme sua{' '}
+                <span className="relative inline-block">
+                  <span className="text-red-500">saúde</span>
+                  <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 100 12" fill="none">
+                    <path d="M2 10C20 2 40 2 58 6C76 10 96 4 98 6" stroke="#dc2626" strokeWidth="3" strokeLinecap="round" fill="none"/>
+                  </svg>
+                </span>
+                {' '}com elegância
               </h1>
-              <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
-                Sou Leticia Arandiba, nutricionista especializada em saúde da mulher. 
-                Ajudo mulheres a conquistarem uma relação saudável com a alimentação 
-                e alcançarem seus objetivos de saúde de forma sustentável.
+              
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                Sou <span className="font-semibold text-gray-800">Leticia Arandiba</span>, sua parceira na jornada para uma vida mais saudável. 
+                Especializada em saúde da mulher, ofereço acompanhamento personalizado e sustentável.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 mb-10">
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gray-900">500+</div>
+                  <div className="text-sm text-gray-600">Mulheres transformadas</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gray-900">5+</div>
+                  <div className="text-sm text-gray-600">Anos de experiência</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gray-900">98%</div>
+                  <div className="text-sm text-gray-600">Satisfação</div>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
                   href="#contato"
-                  className="text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold transition-colors text-center hover:opacity-90"
+                  className="group relative overflow-hidden text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3"
                   style={{backgroundColor: '#25543c'}}
                 >
-                  Agendar Consulta
+                  <span className="relative z-10">Agendar Consulta</span>
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
+                
                 <a
                   href="#sobre"
-                  className="border-2 border-red-400 text-red-500 px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-red-400 hover:text-white transition-colors text-center"
+                  className="group flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors text-lg font-medium"
                 >
-                  Saiba Mais
+                  <span>Conhecer história</span>
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </a>
               </div>
             </div>
-            <div className="relative order-1 lg:order-2">
-              <div className="bg-gradient-to-r from-green-300 to-red-300 rounded-2xl p-6 md:p-8 shadow-2xl">
-                <div className="bg-white rounded-xl p-4 md:p-6 text-center">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-full mx-auto mb-3 md:mb-4 flex items-center justify-center">
-                    <span className="text-gray-400 text-xs md:text-sm">Foto da Leticia</span>
+
+            {/* Visual Element */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative">
+                {/* Main Card */}
+                <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-gray-100/50 backdrop-blur-sm">
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-20" style={{backgroundColor: '#25543c'}}></div>
+                  <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full opacity-20" style={{backgroundColor: '#dc2626'}}></div>
+                  
+                  <div className="relative z-10 text-center">
+                    {/* Profile Photo Placeholder */}
+                    <div className="relative mx-auto mb-6">
+                      <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full mx-auto flex items-center justify-center shadow-inner">
+                        <span className="text-gray-400 text-sm">Foto da Leticia</span>
+                      </div>
+                      {/* Status Badge */}
+                      <div className="absolute -bottom-2 -right-2 bg-green-500 w-8 h-8 rounded-full border-4 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Leticia Arandiba</h3>
+                    <p className="text-red-500 font-semibold mb-1">CRN: 12345</p>
+                    <p className="text-gray-600 mb-6">Especialista em Saúde da Mulher</p>
+                    
+                    {/* Specialties */}
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="bg-green-50 p-3 rounded-xl">
+                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <span className="text-green-600">🌿</span>
+                        </div>
+                        <p className="text-green-700 font-medium">Nutrição Funcional</p>
+                      </div>
+                      <div className="bg-red-50 p-3 rounded-xl">
+                        <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <span className="text-red-600">💖</span>
+                        </div>
+                        <p className="text-red-700 font-medium">Saúde Feminina</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-800">Leticia Arandiba</h3>
-                  <p className="text-gray-600 text-sm">CRN: 12345</p>
-                  <p className="text-gray-600 text-sm">Especialista em Saúde da Mulher</p>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-6 left-6 bg-white rounded-2xl p-4 shadow-lg border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm font-medium text-gray-700">Disponível agora</span>
+                  </div>
+                </div>
+                
+                <div className="absolute -bottom-6 right-6 bg-white rounded-2xl p-4 shadow-lg border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                    <span className="text-sm font-medium text-gray-700">5.0</span>
+                  </div>
                 </div>
               </div>
             </div>
